@@ -1,13 +1,10 @@
 #! /bin/sh
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-opkg update
-opkg install curl
 uci set network.wan6.proto=pppoe
 uci set network.wan6.username=123  
 uci set network.wan6.password=123 
 uci commit
 /etc/init.d/network restart
-
 echo "选择你的省份.，列表如下"
 echo "1: chongqing0094_sxplugin.so"
 echo "2: chongqing_sxplugin.so"
