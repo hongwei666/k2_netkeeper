@@ -5,7 +5,10 @@ uci set network.wan6.username=123
 uci set network.wan6.password=123 
 uci commit
 /etc/init.d/network restart
-sleep10
+curl -kso /bin/start.sh https://raw.githubusercontent.com/hongwei666/k2_netkeeper/master/start.sh
+chmod +x /bin/start.sh
+curl -kso /etc/hotplug/iface/99-start.sh https://raw.githubusercontent.com/hongwei666/k2_netkeeper/master/99-start.sh
+chmod +x /etc/hotplug/iface/99-start.sh
 echo "选择你的省份.，列表如下"
 echo "1: chongqing0094_sxplugin.so"
 echo "2: chongqing_sxplugin.so"
