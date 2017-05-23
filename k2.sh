@@ -5,6 +5,7 @@ uci set network.wan6.username=123
 uci set network.wan6.password=123 
 uci commit
 /etc/init.d/network restart
+sleep10
 echo "选择你的省份.，列表如下"
 echo "1: chongqing0094_sxplugin.so"
 echo "2: chongqing_sxplugin.so"
